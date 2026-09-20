@@ -1,0 +1,24 @@
+[package]
+name = "pgreap"
+version = "0.1.0"
+edition = "2021"
+description = "Finds idle-in-transaction and long-running Postgres connections and, only with an explicit flag, terminates them"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/pgreap"
+readme = "README.md"
+keywords = ["postgres", "pg-stat-activity", "idle-in-transaction", "connections", "ops"]
+categories = ["command-line-utilities", "database"]
+
+[lib]
+name = "pgreap"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pgreap"
+path = "src/main.rs"
+
+[dependencies]
+postgres = "0.19"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
