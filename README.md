@@ -7,6 +7,12 @@ a wiki, eyeballed, then a hand-typed `pg_terminate_backend(1234)` typed
 under pressure during an incident — this is that same workflow made safe
 to run without thinking twice, and safe enough to put in a cron job.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
